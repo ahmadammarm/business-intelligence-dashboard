@@ -36,7 +36,7 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
-export function ChartPie() {
+export function JenisKelaminChart() {
     return (
         <Card className="flex flex-col">
             <CardHeader className="items-center pb-0">

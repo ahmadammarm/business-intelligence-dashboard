@@ -33,7 +33,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartLabel() {
+export function PemesananChart() {
   return (
     <Card>
       <CardHeader>

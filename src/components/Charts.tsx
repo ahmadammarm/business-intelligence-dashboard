@@ -1,16 +1,16 @@
 import React from 'react'
-import { ChartPie } from './ui/chart-pie'
-import { ChartLabel } from './ui/chart-label'
-import { ChartCustomLabel } from './ui/chart-custom-label'
-import { DataTable } from './DataTable'
+import { PemesananChart } from './PemesananChart'
+import { JenisKelaminChart } from './JenisKelaminChart'
+import { JenisPakaianChart } from './JenisPakaianChart'
+import { TotalPemesananChart } from './TotalPemesananChart'
 
 const Charts = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-32">
-            <ChartLabel />
-            <ChartPie />
-            <ChartCustomLabel />
-            <DataTable />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+            <PemesananChart />
+            <JenisKelaminChart />
+            <JenisPakaianChart />
+            <TotalPemesananChart />
         </div>
     )
 }

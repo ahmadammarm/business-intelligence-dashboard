@@ -1,13 +1,10 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from "recharts"
 
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -43,7 +40,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartCustomLabel() {
+export function JenisPakaianChart() {
   return (
     <Card>
       <CardHeader>
