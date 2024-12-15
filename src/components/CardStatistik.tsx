@@ -37,7 +37,7 @@ const CardStatistik = () => {
 	];
 
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 			{items.map((item, index) => (
 				<Card key={index} className="overflow-hidden">
 					<CardContent className="p-6">
