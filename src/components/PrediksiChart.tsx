@@ -1,7 +1,7 @@
 "use client"
 
 import { TrendingUp } from "lucide-react"
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
+import { CartesianGrid, LabelList, Line, LineChart, XAxis } from "recharts"
 
 import {
   Card,
@@ -14,42 +14,42 @@ import {
 import {
   ChartConfig,
   ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { month: "Agustus", pria: 1, wanita: 3 },
-  { month: "September", pria: 2, wanita: 5 },
-  { month: "Oktober", pria: 1, wanita: 3 },
-  { month: "November", pria: 1, wanita: 3 },
-  { month: "Desember", pria: 1, wanita: 3 },
+  { month: "Agustus", desktop: 186, mobile: 80 },
+  { month: "September", desktop: 305, mobile: 200 },
+  { month: "Oktober", desktop: 237, mobile: 120 },
+  { month: "November", desktop: 73, mobile: 190 },
+  { month: "Desember", desktop: 209, mobile: 130 },
+  { month: "Januari", desktop: 209, mobile: 130 },
 ]
 
 const chartConfig = {
-  pria: {
-    label: "pria",
+  desktop: {
+    label: "Desktop",
     color: "hsl(var(--chart-1))",
   },
-  wanita: {
-    label: "wanita",
+  mobile: {
+    label: "Mobile",
     color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig
 
-export function JenisKelaminChart() {
+export function PrediksiChart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Tren Pemesanan Berdasarkan Jenis Kelamin</CardTitle>
+        <CardTitle>Prediksi Pemesanan Bulan Depan</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
-          <AreaChart
+          <LineChart
             accessibilityLayer
             data={chartData}
             margin={{
+              top: 20,
               left: 12,
               right: 12,
             }}
@@ -66,24 +66,26 @@ export function JenisKelaminChart() {
               cursor={false}
               content={<ChartTooltipContent indicator="line" />}
             />
-            <Area
-              dataKey="wanita"
+            <Line
+              dataKey="desktop"
               type="natural"
-              fill="var(--color-wanita)"
-              fillOpacity={0.4}
-              stroke="var(--color-wanita)"
-              stackId="a"
-            />
-            <Area
-              dataKey="pria"
-              type="natural"
-              fill="var(--color-pria)"
-              fillOpacity={0.4}
-              stroke="var(--color-pria)"
-              stackId="a"
-            />
-            <ChartLegend content={<ChartLegendContent />} />
-          </AreaChart>
+              stroke="var(--color-desktop)"
+              strokeWidth={2}
+              dot={{
+                fill: "var(--color-desktop)",
+              }}
+              activeDot={{
+                r: 6,
+              }}
+            >
+              <LabelList
+                position="top"
+                offset={12}
+                className="fill-foreground"
+                fontSize={12}
+              />
+            </Line>
+          </LineChart>
         </ChartContainer>
       </CardContent>
     </Card>

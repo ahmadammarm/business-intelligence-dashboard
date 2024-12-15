@@ -2,7 +2,7 @@ import React from 'react'
 import { PemesananChart } from './PemesananChart'
 import { JenisKelaminChart } from './JenisKelaminChart'
 import { JenisPakaianChart } from './JenisPakaianChart'
-import { TotalPemesananChart } from './TotalPemesananChart'
+import { PrediksiChart } from './PrediksiChart'
 
 const Charts = () => {
     return (
@@ -10,7 +10,7 @@ const Charts = () => {
             <PemesananChart />
             <JenisKelaminChart />
             <JenisPakaianChart />
-            <TotalPemesananChart />
+            <PrediksiChart />
         </div>
     )
 }
