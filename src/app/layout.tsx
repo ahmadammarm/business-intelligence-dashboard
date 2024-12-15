@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-            <body className="antialiased bg-gray-200 dark:bg-black">
+            <body className="antialiased">
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
